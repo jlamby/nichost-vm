@@ -11,5 +11,6 @@ Vagrant.configure(2) do |config|
   	config.vm.box_url = "https://github.com/jose-lpa/packer-debian_7.6.0/releases/download/1.0/packer_virtualbox-iso_virtualbox.box"
 
   	config.vm.provision :shell, path: "installDocker.sh"
+  	config.vm.provision :shell, path: "installContainers.sh", args: ["/vagrant/"]
 
 end
