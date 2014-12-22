@@ -7,8 +7,9 @@ if [ $# -gt 0 ]; then
 fi
 
 # build data volume containers
-docker build -t "logs" $basePath"docker-logs"
+docker build -t "logs"          $basePath"docker-logs"
+docker build -t "www-datas"     $basePath"docker-www_datas"
 
 # build Apache-PHP container
-docker build -t "apache-php" $basePath"docker-apache"
+docker build -t "apache-php"    $basePath"docker-apache"
 
