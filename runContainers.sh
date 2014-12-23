@@ -5,7 +5,7 @@ docker run -d -i -t --name LOGS         logs
 docker run -d -i -t --name WWW-DATAS    www-datas
 
 # run normal containers
-docker run -d -i -t -p 80:80 \
+docker run -d -i -t \
     --name apache \
     --volumes-from LOGS \
     --volumes-from WWW-DATAS \
