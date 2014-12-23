@@ -1,0 +1,11 @@
+server {
+        listen          80;
+        server_name     chatlog.zzqsd.be;
+
+        access_log      /var/log/apache-access.log      combined;
+        error_log       /var/log/apache-error.log       warn;
+
+        location / {
+                proxy_pass      http://chatlog:1380/;
+        }
+}

@@ -10,6 +10,8 @@ fi
 docker build -t "logs"          $basePath"docker-logs"
 docker build -t "www-datas"     $basePath"docker-www_datas"
 
-# build Apache-PHP container
+
+# build normal containers
+docker build -t "nginx"         $basePath"docker-nginx"
 docker build -t "apache-php"    $basePath"docker-apache"
 

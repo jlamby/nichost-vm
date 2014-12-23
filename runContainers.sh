@@ -10,3 +10,10 @@ docker run -d -i -t \
     --volumes-from LOGS \
     --volumes-from WWW-DATAS \
     apache-php
+
+docker run -d -i -t -p 80:80 \
+    --name nginx \
+    --link apache:apache \
+    --volumes-from LOGS \
+    nginx
+
