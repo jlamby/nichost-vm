@@ -5,15 +5,21 @@ docker run -d -i -t --name LOGS         logs
 docker run -d -i -t --name WWW-DATAS    www-datas
 
 # run normal containers
-docker run -d -i -t \
-    --name apache \
-    --volumes-from LOGS \
-    --volumes-from WWW-DATAS \
+docker run -d -i -t             \
+    --name apache               \
+    --volumes-from LOGS         \
+    --volumes-from WWW-DATAS    \
     apache-php
 
-docker run -d -i -t -p 80:80 \
-    --name nginx \
-    --link apache:apache \
-    --volumes-from LOGS \
+docker run -d -i -t             \
+    --name chatlog              \
+    play-chatlog
+
+
+docker run -d -i -t -p 80:80    \
+    --name nginx                \
+    --link apache:apache        \
+    --link chatlog:chatlog      \
+    --volumes-from LOGS         \
     nginx
 

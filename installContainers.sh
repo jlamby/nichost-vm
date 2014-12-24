@@ -14,4 +14,5 @@ docker build -t "www-datas"     $basePath"docker-www_datas"
 # build normal containers
 docker build -t "nginx"         $basePath"docker-nginx"
 docker build -t "apache-php"    $basePath"docker-apache"
+docker build -t "play-chatlog"  $basePath"docker-play"
 
