@@ -1,0 +1,11 @@
+CREATE SCHEMA nico_db_integ;
+CREATE SCHEMA wiki;
+CREATE SCHEMA seriesdown;
+
+GRANT ALL PRIVILEGES ON nico_db_integ.* TO 'nico_integ'@'%' IDENTIFIED BY '{NICO_DB_INTEG_PWD}';
+GRANT ALL PRIVILEGES ON wiki.*          TO 'vince2'@'%'     IDENTIFIED BY '{VINCE2_PWD}';
+GRANT ALL PRIVILEGES ON seriesdown.*    TO 'vince2'@'%'     IDENTIFIED BY '{VINCE2_PWD}';
+
+FLUSH PRIVILEGES;
+
+SHOW DATABASES;

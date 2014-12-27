@@ -12,7 +12,8 @@ Vagrant.configure(2) do |config|
 
   	config.vm.provision :shell, path: "installDocker.sh"
   	config.vm.provision :shell, path: "installContainers.sh", args: ["/vagrant/"]
-  	config.vm.provision :shell, path: "runContainers.sh"
+  	config.vm.provision :shell, path: "initDatabases.sh"
+    config.vm.provision :shell, path: "runContainers.sh"
 
   	config.vm.network "forwarded_port", guest: 80, host: 8080
 

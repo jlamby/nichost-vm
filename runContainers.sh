@@ -33,4 +33,3 @@ docker run -d -i -t -p 80:80    \
     --link chatlog:chatlog      \
     --volumes-from LOGS         \
     nginx
-
