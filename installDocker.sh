@@ -2,7 +2,7 @@
 
 echo "deb http://http.debian.net/debian wheezy-backports main" >> /etc/apt/sources.list
 apt-get update
-apt-get upgrade -f -y --force-yes
+apt-get upgrade -y -f
 apt-get install -y wheezy-backports linux-image-amd64
 
 curl -sSL https://get.docker.com/ | sh
