@@ -1,5 +1,4 @@
 FROM tutum/apache-php
-MAINTAINER Julien Lamby
 
 # Add image configuration and scripts
 ADD run.sh /run.sh
